@@ -20,10 +20,10 @@ public class DoctorController {
 
         } else if (number >= 1 && number <= 12) {
 
-            throw new ResponseStatusException(HttpStatus.SEE_OTHER, "See Other ");
+            throw new ResponseStatusException(HttpStatus.SEE_OTHER);
         } else {
-            String errorMessage = "Impossible de récupérer l'incarnation " + number;
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, errorMessage);
+
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de récupérer l'incarnation " + number);
         }
     }
 }
